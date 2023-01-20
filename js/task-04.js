@@ -17,8 +17,8 @@ const counterValue = function ({
 counterValue.prototype._getRefs = function (rootSelector) {
   const refs = {};
   refs.container = document.querySelector(rootSelector);
-  refs.incrementBtn = refs.container.querySelector('[data-action="increment"]');
-  refs.decrementBtn = refs.container.querySelector('[data-action="decrement"]');
+  refs.incrementBtn = refs.container.querySelector('button[data-action="increment"]');
+  refs.decrementBtn = refs.container.querySelector('button[data-action="decrement"]');
   refs.value = refs.container.querySelector('#value');
     
   return refs;
