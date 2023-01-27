@@ -11,22 +11,20 @@ refs.buttonDestroy.addEventListener('click', destroyBoxes);
 
 
 function createBoxes(){
-const numberInputValue = Number(refs.input.value);
-  for (let i = 1; i <= numberInputValue; i+=1) {
+  for (let i = 1; i <= refs.input.value; i+=1) {
 	const div = document.createElement('div');
-	div.style.width = '30px';
-  div.style.height = '30px';
-  div.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+	div.style.width = `${30 + i * 10}px`;
+  div.style.height = `${30 + i * 10}px`;
+  div.style.backgroundColor = getRandomHexColor();
   
 	refs.boxed.append(div);
- 
 }
 };
 
-function getRandomHexColor(event) {
-  const colorRandom = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function destroyBoxes(event){
+function destroyBoxes(){
   refs.boxed.remove(document.querySelector('div'));
 }
