@@ -11,7 +11,7 @@ refs.buttonDestroy.addEventListener('click', destroyBoxes);
 
 
 function createBoxes(){
-  for (let i = 1; i <= refs.input.value; i+=1) {
+  for (let i = 0; i <= refs.input.value; i+=1) {
 	const div = document.createElement('div');
 	div.style.width = `${30 + i * 10}px`;
   div.style.height = `${30 + i * 10}px`;
