@@ -10,3 +10,13 @@ function onInputBlur() {
   }
   return input.classList.add("invalid");
 }
+
+
+// input.addEventListener("input", onInputBlur);
+// function onInputBlur() { 
+//   input.classList.remove('valid', 'invalid');
+//   if (input.value.length === inputLength) { 
+//     input.classList.add("valid"); 
+//  } 
+//   input.classList.add("invalid");
+// }
