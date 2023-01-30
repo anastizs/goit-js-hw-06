@@ -11,12 +11,12 @@ const inputLength = Number(input.getAttribute("data-length"));
 //   return input.classList.add("invalid");
 // }
 
-
 input.addEventListener("blur", onInputBlur);
-function onInputBlur() { 
-  input.classList.remove('valid', 'invalid');
-  if (input.value.length === inputLength) { 
-    input.classList.add("valid"); 
- } else{
-  input.classList.add("invalid")};
+function onInputBlur() {
+  input.classList.remove("valid", "invalid");
+  if (input.value.length === inputLength) {
+    input.classList.add("valid");
+  } else {
+    input.classList.add("invalid");
+  }
 }
